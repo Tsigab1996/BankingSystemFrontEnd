@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
 export default function BankerDetails(props) {
@@ -37,6 +37,7 @@ export default function BankerDetails(props) {
     const cancelBanker = () => {
         navigate('/')
     }
+    
 
     const updateBanker = () => {
         navigate("/managebanker/" + param.id);
@@ -44,7 +45,7 @@ export default function BankerDetails(props) {
 
     useEffect(() => {
         getBankerObjById();
-    }, [param.id]);
+    });
 
     return (
         <div id="details">

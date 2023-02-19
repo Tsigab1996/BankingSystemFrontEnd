@@ -25,7 +25,7 @@ export default function ViewSavingOrChecking() {
 
     useEffect(() => {
         viewSavingOrChecking();
-    }, [inputId])
+    })
 
 
     return (

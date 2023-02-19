@@ -11,7 +11,7 @@ export default function Transaction(props) {
                                 <h1>Transaction Date: {props.transactionDate}</h1>
                                 <h1>Amount: {props.amount}</h1>
                                 <h1>Transaction Type: {props.transactionType}</h1>
-                                <h1></h1>
+                             
                             </div>
                         </li>
                     </ul>

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Transaction from '../ADMIN/Transaction';
 
 export default function ViewTransactionHistroy() {
@@ -7,6 +7,8 @@ export default function ViewTransactionHistroy() {
     const [userId, setUserId] = useState();
     const [accountId, setAccountId] = useState();
     const [transactions, setTransactions] = useState([]);
+
+    
 
 
     let getAllTransactions = () => {
@@ -23,7 +25,7 @@ export default function ViewTransactionHistroy() {
 
     useEffect(() => {
         getAllTransactions();
-    }, [])
+    })
 
 
     return (

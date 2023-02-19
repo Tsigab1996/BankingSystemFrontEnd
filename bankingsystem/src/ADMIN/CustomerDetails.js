@@ -46,7 +46,7 @@ export default function CustomerDetails(props) {
 
     useEffect(() => {
         getCustomerObjById();
-    }, [param.id]);
+    });
 
     return (
         <div id="details">

@@ -26,7 +26,7 @@ export default function TransactionDetails(props) {
 
     useEffect(() => {
         getAllTransactions();
-    }, [param.id])
+    })
     return (
         <div>
             {transactionsList}

@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react'
+import axios from 'axios';
+import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
 export default function ManageBanker() {
@@ -7,7 +8,9 @@ export default function ManageBanker() {
     const navigate = useNavigate();
     const form = useRef();
 
-    const [updatedBanker, setUpdatedBanker] = useState({});
+    
+
+    let [updatedBanker, setUpdatedBanker] = useState({});
 
 
     let getBanker = () => {
@@ -44,7 +47,7 @@ export default function ManageBanker() {
 
     useEffect(() => {
         getBanker();
-    }, [param.id])
+    })
 
 
 

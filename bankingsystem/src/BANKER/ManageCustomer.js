@@ -1,14 +1,17 @@
 import axios from 'axios';
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 
 export default function ManageCustomer() {
 
 
-    const [updatedCustomer, setUpdatedCustomer] = useState({});
+    let [updatedCustomer, setUpdatedCustomer] = useState({});
+
+    
 
     const param = useParams();
     const navigate = useNavigate();
+    const form=useRef();
 
 
     let getCustomer = () => {
@@ -45,7 +48,7 @@ export default function ManageCustomer() {
 
     useEffect(() => {
         getCustomer();
-    }, [param.id])
+    })
 
 
 

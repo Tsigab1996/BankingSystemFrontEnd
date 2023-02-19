@@ -1,5 +1,6 @@
-import Link from 'link-react'
+
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
@@ -8,6 +9,7 @@ export default function Header() {
         <nav>
           <ul>
 
+             
 
             {/* Admin */}
             <li><Link to="/viewbankers">Bankers</Link></li>
@@ -30,7 +32,7 @@ export default function Header() {
 
 
             {/* log in */}
-            <li><Link to="/login">LogIn</Link></li>
+            {/* <li><Link to="/login">LogIn</Link></li> */}
 
           </ul>
         </nav>
