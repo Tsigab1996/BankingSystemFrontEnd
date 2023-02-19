@@ -3,11 +3,11 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 export default function ManageBanker() {
 
-    const param= useParams();
-    const navigate= useNavigate();
-    const form= useRef();
+    const param = useParams();
+    const navigate = useNavigate();
+    const form = useRef();
 
-    const[updatedBanker, setUpdatedBanker]= useState({});
+    const [updatedBanker, setUpdatedBanker] = useState({});
 
 
     let getBanker = () => {
@@ -19,8 +19,8 @@ export default function ManageBanker() {
 
 
     //Managing or updating banker 
-    const handleBanker=()=>{
-        const formData= form.current;
+    const handleBanker = () => {
+        const formData = form.current;
 
         let bankerData = {
             firstName: formData['firstName'].value,
@@ -31,14 +31,14 @@ export default function ManageBanker() {
         }
 
         axios.put("http://localhost:8080/api/v1/users/update" + param.id, bankerData,)
-        .then((res)=>{
-            navigate('/')
-        }).catch("Data not updated")
+            .then((res) => {
+                navigate('/')
+            }).catch("Data not updated")
     }
 
 
     //This will navigate this page to the home page
-    const cancelBanker= ()=>{
+    const cancelBanker = () => {
         navigate('/')
     }
 
@@ -47,7 +47,7 @@ export default function ManageBanker() {
     }, [param.id])
 
 
-  
+
 
     return (
 
@@ -59,31 +59,31 @@ export default function ManageBanker() {
                 <input type="text"
                     label={'firstName'}
                     name={'firstName'}
-                    value={updatedBanker.firstName} onChange={(e)=>setUpdatedBanker(updatedBanker.firstName= e.target.value)}>
+                    value={updatedBanker.firstName} onChange={(e) => setUpdatedBanker(updatedBanker.firstName = e.target.value)}>
                 </input>
                 <label>Last Name: </label>
                 <input type="text"
                     label={'lastName'}
                     name={'lastName'}
-                    value={updatedBanker.lastName} onChange={(e)=>setUpdatedBanker(updatedBanker= e.target.value)}>
+                    value={updatedBanker.lastName} onChange={(e) => setUpdatedBanker(updatedBanker = e.target.value)}>
                 </input>
                 <label>Phone Number: </label>
                 <input type="text"
                     label={'phoneNumber'}
                     name={'phoneNumber'}
-                    value={updatedBanker.phoneNumber} onChange={(e)=>setUpdatedBanker(updatedBanker.phoneNumber= e.target.value)}>
+                    value={updatedBanker.phoneNumber} onChange={(e) => setUpdatedBanker(updatedBanker.phoneNumber = e.target.value)}>
                 </input>
                 <label>Email: </label>
                 <input type="text"
                     label={'email'}
                     name={'email'}
-                    value={updatedBanker.email} onChange={(e)=>setUpdatedBanker(updatedBanker.email= e.target.value)}>
+                    value={updatedBanker.email} onChange={(e) => setUpdatedBanker(updatedBanker.email = e.target.value)}>
                 </input>
                 <label>Password: </label>
                 <input type="text"
                     label={'password'}
                     name={'password'}
-                    value={updatedBanker.password} onChange={(e)=>setUpdatedBanker(updatedBanker.password= e.target.value)}>
+                    value={updatedBanker.password} onChange={(e) => setUpdatedBanker(updatedBanker.password = e.target.value)}>
                 </input>
 
                 <button onClick={handleBanker}>update</button>

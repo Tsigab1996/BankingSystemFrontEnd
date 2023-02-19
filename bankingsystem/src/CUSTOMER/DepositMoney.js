@@ -3,11 +3,11 @@ import React, { useState } from 'react'
 
 export default function DepositMoney() {
 
-   
-  
+
+
     const [criteria, setCriteria] = useState();
     const [inputId, setInputId] = useState();
-    
+
 
 
     let ApplyDeposit = () => {
@@ -42,9 +42,9 @@ export default function DepositMoney() {
                     <option value={'amount'}>3000</option>
                 </select>
 
-               <button onClick={ApplyDeposit}>Deposit</button>
+                <button onClick={ApplyDeposit}>Deposit</button>
 
-              
+
 
             </div>
         </div>

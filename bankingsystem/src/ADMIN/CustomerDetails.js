@@ -40,8 +40,8 @@ export default function CustomerDetails(props) {
         navigate('/')
     }
 
-    const updateCustomer=()=>{
-        navigate("/managecustomer/"+ param.id);
+    const updateCustomer = () => {
+        navigate("/managecustomer/" + param.id);
     }
 
     useEffect(() => {

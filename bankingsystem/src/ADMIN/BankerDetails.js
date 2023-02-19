@@ -38,8 +38,8 @@ export default function BankerDetails(props) {
         navigate('/')
     }
 
-    const updateBanker=()=>{
-        navigate("/managebanker/"+ param.id);
+    const updateBanker = () => {
+        navigate("/managebanker/" + param.id);
     }
 
     useEffect(() => {

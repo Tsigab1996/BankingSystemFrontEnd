@@ -2,10 +2,10 @@ import axios from 'axios';
 import React, { useState } from 'react'
 
 export default function WithdrawMoney() {
- 
+
     const [criteria, setCriteria] = useState();
     const [inputId, setInputId] = useState();
-    
+
 
 
     let ApplyWithDrawal = () => {
@@ -40,9 +40,9 @@ export default function WithdrawMoney() {
                     <option value={'amount'}>3000</option>
                 </select>
 
-               <button onClick={ApplyWithDrawal}>WithDraw</button>
+                <button onClick={ApplyWithDrawal}>WithDraw</button>
 
-              
+
 
             </div>
         </div>
