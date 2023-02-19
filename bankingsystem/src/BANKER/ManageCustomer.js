@@ -5,10 +5,10 @@ import { useNavigate, useParams } from 'react-router-dom';
 export default function ManageCustomer() {
 
 
-    const[updatedCustomer, setUpdatedCustomer]= useState({});
+    const [updatedCustomer, setUpdatedCustomer] = useState({});
 
-    const param= useParams();
-    const navigate= useNavigate();
+    const param = useParams();
+    const navigate = useNavigate();
 
 
     let getCustomer = () => {
@@ -20,8 +20,8 @@ export default function ManageCustomer() {
 
 
     //Managing or updating banker 
-    const handleCustomer=()=>{
-        const formData= form.current;
+    const handleCustomer = () => {
+        const formData = form.current;
 
         let customerData = {
             firstName: formData['firstName'].value,
@@ -32,14 +32,14 @@ export default function ManageCustomer() {
         }
 
         axios.put("http://localhost:8080/api/v1/users/update" + param.id, customerData,)
-        .then((res)=>{
-            navigate('/')
-        }).catch("Data not updated")
+            .then((res) => {
+                navigate('/')
+            }).catch("Data not updated")
     }
 
 
     //This will navigate this page to the home page
-    const cancelCustomer= ()=>{
+    const cancelCustomer = () => {
         navigate('/')
     }
 
@@ -48,7 +48,7 @@ export default function ManageCustomer() {
     }, [param.id])
 
 
-  
+
 
     return (
 
@@ -60,31 +60,31 @@ export default function ManageCustomer() {
                 <input type="text"
                     label={'firstName'}
                     name={'firstName'}
-                    value={updatedCustomer.firstName} onChange={(e)=>setUpdatedCustomer(updatedCustomer.firstName= e.target.value)}>
+                    value={updatedCustomer.firstName} onChange={(e) => setUpdatedCustomer(updatedCustomer.firstName = e.target.value)}>
                 </input>
                 <label>Last Name: </label>
                 <input type="text"
                     label={'lastName'}
                     name={'lastName'}
-                    value={updatedCustomer.lastName} onChange={(e)=>setUpdatedCustomer(updatedCustomer= e.target.value)}>
+                    value={updatedCustomer.lastName} onChange={(e) => setUpdatedCustomer(updatedCustomer = e.target.value)}>
                 </input>
                 <label>Phone Number: </label>
                 <input type="text"
                     label={'phoneNumber'}
                     name={'phoneNumber'}
-                    value={updatedCustomer.phoneNumber} onChange={(e)=>setUpdatedCustomer(updatedCustomer.phoneNumber= e.target.value)}>
+                    value={updatedCustomer.phoneNumber} onChange={(e) => setUpdatedCustomer(updatedCustomer.phoneNumber = e.target.value)}>
                 </input>
                 <label>Email: </label>
                 <input type="text"
                     label={'email'}
                     name={'email'}
-                    value={updatedCustomer.email} onChange={(e)=>setUpdatedCustomer(updatedCustomer.email= e.target.value)}>
+                    value={updatedCustomer.email} onChange={(e) => setUpdatedCustomer(updatedCustomer.email = e.target.value)}>
                 </input>
                 <label>Password: </label>
                 <input type="text"
                     label={'password'}
                     name={'password'}
-                    value={updatedCustomer.password} onChange={(e)=>setUpdatedCustomer(updatedCustomer.password= e.target.value)}>
+                    value={updatedCustomer.password} onChange={(e) => setUpdatedCustomer(updatedCustomer.password = e.target.value)}>
                 </input>
 
                 <button onClick={handleCustomer}>update</button>

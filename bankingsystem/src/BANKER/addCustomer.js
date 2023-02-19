@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-export default function addCustomer() {
+export default function AddCustomer() {
  
 
 const form = useRef();

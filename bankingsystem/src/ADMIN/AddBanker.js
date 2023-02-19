@@ -21,7 +21,7 @@ export default function AddBanker(props) {
 
 
         axios.post("http://localhost:8080/api/v1/users", data)
-            .then(response => {
+            .then(() => {
                 navigate("/");
             }).catch(err => {
                 alert(err);

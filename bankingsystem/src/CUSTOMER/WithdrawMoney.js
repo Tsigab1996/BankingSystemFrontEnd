@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 
-export default function Withdraw() {
+export default function WithdrawMoney() {
  
     const [criteria, setCriteria] = useState();
     const [inputId, setInputId] = useState();

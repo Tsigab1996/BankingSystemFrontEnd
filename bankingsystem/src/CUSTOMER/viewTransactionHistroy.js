@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import Transaction from '../ADMIN/Transaction';
 
-export default function viewTransactionHistroy() {
+export default function ViewTransactionHistroy() {
 
     const [userId, setUserId] = useState();
     const [accountId, setAccountId] = useState();
