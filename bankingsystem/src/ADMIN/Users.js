@@ -1,13 +1,14 @@
 import React from 'react'
+import './Admin.css'
 
 export default function Users(props) {
     return (
-        <div id='customer' >
+        <div id='users' >
             <ul>
                 <li>
-                    <div id="box-customer">
-                        <h1>First Name: {props.firstName}</h1>
-                        <h1>Last Name: {props.lastName}</h1>
+                    <div id="userbox">
+                        <h1>{props.firstName}</h1>
+                        <h1>{props.lastName}</h1>
                     </div>
                 </li>
             </ul>

@@ -1,0 +1,155 @@
+body{
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQst3_jNO7hDm6FWIi2b_nf4tPx-WrwBDqmOQ&usqp=CAU);
+    background-size: 100px;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+#account {
+    background-color:white;
+    width: 500px;
+    font-size: 20px;
+    padding-left: 0px;
+    border-radius: 50px;
+    margin-top: 120px;
+    height: 300px;
+    margin-inline-start: 100px;
+    display: inline-flex;
+}
+
+#account>ul{
+    display: inline-flex;
+}
+
+
+
+#account>ul>:hover {
+  
+    margin-top: 5px;
+    border-radius: 50px;
+  
+  
+
+}
+#account>ul>li{
+    list-style-type: none;
+    display: inline-flex;
+}
+
+#accountbox {
+    background-color: rgb(245, 248, 248);
+    padding-left: 0.5px;
+    border-radius: 30px;
+    padding-bottom: 10px;
+    color: rgb(12, 10, 14);
+    font-size: 15px;
+    font-family: nigerian;
+    font-style: italic;
+    text-transform: capitalize;
+    font-weight: bolder;
+    list-style-type: none;
+    text-shadow: 1px 1px 2px rgb(190, 75, 75), 0 0 1em rgb(5, 25, 11), 0 0 0.2em rgb(191, 31, 31);
+
+
+}
+
+
+#users {
+    background-color:black;
+    opacity: 0.8px;
+    width: 400px;
+    font-size: 20px;
+    padding-left: 0px;
+    border-radius: 50px;
+    margin-top: 120px;
+    height: 300px;
+    margin-inline-start: 100px;
+    display: inline-flex;
+}
+
+#users ul{
+    display: inline-flex;
+}
+
+
+
+#users >ul>:hover {
+
+   
+ 
+    width: 450px;
+    height: 290px;
+    padding-left: 0px;
+    margin-top: 5px;
+    border-radius: 50px;
+  
+  
+
+}
+#users >ul>li{
+    list-style-type: none;
+    display: inline-flex;
+}
+
+#userbox {
+    background-color:black;
+    padding-top: 35px;
+    padding-left: 0.5px;
+    text-decoration: none;
+    border-radius: 30px;
+    padding-bottom: 10px;
+    color: rgb(214, 15, 48);
+    opacity: 3px;
+    font-size: 30px;
+    font-family: nigerian;
+    font-style: italic;
+    text-transform: capitalize;
+    font-weight: bolder;
+    list-style-type: none;
+    text-shadow: 1px 1px 2px rgb(236, 225, 225), 0 0 1em rgb(22, 171, 67), 0 0 0.2em rgb(191, 31, 31);
+
+
+}
+
+
+#transactionDetails {
+
+    color: red;
+    width: 500px;
+    float: left;
+    margin-top: -400px;
+    margin-left: 100px;
+    position: absolute;
+    position: relative;
+    opacity: 0.9;
+    text-align: left;
+    padding-left: 30px;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 500px;
+    font-family: Nigerian;
+    font-style: italic;
+    height: 370px;
+
+}
+
+#btn {
+    background-color: aqua;
+    font-size: 30px;
+    border-radius: 30px;
+    width: 350px;
+}
+
+#btn>ul>li {
+    list-style: none;
+    display: inline-flex;
+    margin: 10px;
+
+}
+
+#img {
+    margin-top: 5px;
+    border-radius: 50px;
+    border-color: rgb(236, 148, 16);
+}
+

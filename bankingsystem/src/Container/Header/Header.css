@@ -1,0 +1,61 @@
+.header {
+    width: 80%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTngrE7wWsjvaZeh74WZTahU_9qi1s0QfHS3A&usqp=CAU);
+   background-size: cover;
+    padding: 0 10%;
+    border-radius: 20px;
+    position:fixed;
+    margin-top: 10px;
+    opacity: 0.8px;
+  }
+  
+  .header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  
+  .header li {
+    margin: 0 1rem;
+  }
+  
+  .header a {
+    text-decoration: none;
+    color: rgb(252, 252, 9);
+    font-size: 1.25rem;
+    border-radius: 30px;
+    text-transform: capitalize;
+    font-size: 22px;
+    font-family: Nigerian;
+    font-weight: bolder;
+    font-style: italic;
+  }
+  
+  .header a:hover,
+  .header a:active {
+    color:white;
+  }
+  
+  .header button {
+    font-size: 1.25rem;
+    background-color: #ffbb00c7;
+    border: 1px solid #ffbb00;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    color: #2c2922;
+  }
+  
+  .header button:hover,
+  .header button:active {
+    background-color: #ffa600;
+    border-color: #ffa600;
+  }
+
+
+  

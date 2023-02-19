@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import './Admin.css'
 
 export default function ManageBanker() {
 
@@ -54,7 +55,7 @@ export default function ManageBanker() {
 
     return (
 
-        <div>
+        <div  id= "managebanker">
             <form ref={form}>
                 <h1>EDIT BANKER</h1>
 

@@ -28,7 +28,7 @@ export default function TransactionDetails(props) {
         getAllTransactions();
     })
     return (
-        <div>
+        <div id="transactionDetails">
             {transactionsList}
         </div>
     )
