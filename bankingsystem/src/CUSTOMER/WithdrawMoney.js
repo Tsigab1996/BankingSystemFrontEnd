@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import './Customer.css'
 
 export default function WithdrawMoney() {
 
@@ -27,10 +28,10 @@ export default function WithdrawMoney() {
 
     return (
         <div>
-            <div>
+            <div id="withdraw">
 
                 <label>Enter your AccountID: </label>
-                <input type="text" value={inputId} onChange={(e) => setInputId(e.target.value)} />
+                <input type="text" value={inputId} onChange={(e) => setInputId(e.target.value)} /><br/><br/>
 
                 <label>selectBalance: </label>
                 <select onChange={(e) => { setCriteria(e.target.value) }}>
@@ -38,9 +39,9 @@ export default function WithdrawMoney() {
                     <option value={'amount'}>1000</option>
                     <option value={'amount'}>2000</option>
                     <option value={'amount'}>3000</option>
-                </select>
+                </select><br/><br/>
 
-                <button onClick={ApplyWithDrawal}>WithDraw</button>
+                <button id="withdrawbtn" onClick={ApplyWithDrawal}>WithDraw</button>
 
 
 

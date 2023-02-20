@@ -33,39 +33,39 @@ export default function AddBanker(props) {
     return (
         <div className="NewEmployee">
 
-            <form ref={form}>
-                <h1>Add a Banker</h1>
+            <form  id="addbanker" ref={form}>
+                <h1>Add a Banker</h1> 
 
                 <label>First Name</label>
                 <input type="text"
                     label={'firstName'}
                     name={'firstName'}
-                />
+                /><br/><br/>
 
                 <label>Last Name</label>
                 <input type="text"
                     label={'lastName'}
                     name={'lastName'}
-                />
+                /><br/><br/>
 
                 <label>Phone Number</label>
                 <input type="text"
                     label={'phoneNumber'}
                     name={'phoneNumber'}
-                />
+                /><br/><br/>
 
                 <label>Email</label>
                 <input type="text"
                     label={'email'}
                     name={'email'}
-                />
+                /><br/><br/>
 
                 <label>Password</label>
                 <input type="password"
                     label={'password'}
                     name={'password'}
-                />
-                <button onClick={saveBanker}>Add Banker</button>
+                /><br/><br/>
+                <button  id="addbankerbtn" onClick={saveBanker}>Add Banker</button>
             </form>
 
         </div>

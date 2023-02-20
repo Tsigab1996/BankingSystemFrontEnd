@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
+import './Banker.css'
 
 export default function AddCustomer() {
 
@@ -91,40 +92,40 @@ export default function AddCustomer() {
     return (
         <div className="NewCustomer">
 
-            <form ref={form}>
+            <form  id='addcustomer' ref={form}>
                 <h1>Add a Customer</h1>
 
                 <label>First Name</label>
                 <input type="text"
                     label={'firstName'}
                     name={'firstName'}
-                />
+                /><br/><br/>
 
                 <label>Last Name</label>
                 <input type="text"
                     label={'lastName'}
                     name={'lastName'}
-                />
+                /><br/><br/>
 
                 <label>Phone Number</label>
                 <input type="text"
                     label={'phoneNumber'}
                     name={'phoneNumber'}
-                />
+                /><br/><br/>
 
                 <label>Email</label>
                 <input type="text"
                     label={'email'}
                     name={'email'}
-                />
+                /><br/><br/>
 
                 <label>Password</label>
                 <input type="password"
                     label={'password'}
                     name={'password'}
-                />
-                <button onClick={saveCustomer}>Add Customer</button>
-                <button onClick={nextHandler}>Next</button>
+                /><br/><br/>
+                <button id="addcustomerbtn" onClick={saveCustomer}>Add Customer</button>
+                <button id="addcustomerbtn" onClick={nextHandler}>Next</button>
             </form>
 
         </div>

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
+import './Banker.css'
 
 export default function ManageCustomer() {
 
@@ -56,7 +57,7 @@ export default function ManageCustomer() {
     return (
 
         <div>
-            <form ref={form}>
+            <form id="managecustomer" ref={form}>
                 <h1>EDIT CUSTOMER</h1>
 
                 <label>First Name: </label>
@@ -64,34 +65,34 @@ export default function ManageCustomer() {
                     label={'firstName'}
                     name={'firstName'}
                     value={updatedCustomer.firstName} onChange={(e) => setUpdatedCustomer(updatedCustomer.firstName = e.target.value)}>
-                </input>
+                </input><br/><br/>
                 <label>Last Name: </label>
                 <input type="text"
                     label={'lastName'}
                     name={'lastName'}
                     value={updatedCustomer.lastName} onChange={(e) => setUpdatedCustomer(updatedCustomer = e.target.value)}>
-                </input>
+                </input><br/><br/>
                 <label>Phone Number: </label>
                 <input type="text"
                     label={'phoneNumber'}
                     name={'phoneNumber'}
                     value={updatedCustomer.phoneNumber} onChange={(e) => setUpdatedCustomer(updatedCustomer.phoneNumber = e.target.value)}>
-                </input>
+                </input><br/><br/>
                 <label>Email: </label>
                 <input type="text"
                     label={'email'}
                     name={'email'}
                     value={updatedCustomer.email} onChange={(e) => setUpdatedCustomer(updatedCustomer.email = e.target.value)}>
-                </input>
+                </input><br/><br/>
                 <label>Password: </label>
                 <input type="text"
                     label={'password'}
                     name={'password'}
                     value={updatedCustomer.password} onChange={(e) => setUpdatedCustomer(updatedCustomer.password = e.target.value)}>
-                </input>
+                </input><br/><br/>
 
-                <button onClick={handleCustomer}>update</button>
-                <button onClick={cancelCustomer}>Back</button>
+                <button  id="managecustomerbtn" onClick={handleCustomer}>update</button>
+                <button  id="managecustomerbtn"  onClick={cancelCustomer}>Back</button>
 
 
             </form>

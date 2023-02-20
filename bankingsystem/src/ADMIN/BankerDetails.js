@@ -48,7 +48,7 @@ export default function BankerDetails(props) {
     });
 
     return (
-        <div id="details">
+        <div id="bankerdetails">
             <div>
                 <h1>First Name: {bankerObj.firstName}</h1>
                 <h1>Last Name:{bankerObj.lastName}</h1>
@@ -58,9 +58,9 @@ export default function BankerDetails(props) {
             </div>
 
             <div>
-                <button onClick={deleteBanker}>Delete</button>
-                <button onClick={updateBanker}>Manage Banker</button>
-                <button onClick={cancelBanker}>Back</button>
+                <button id="addbankerbtn" onClick={deleteBanker}>Delete</button>
+                <button id="addbankerbtn" onClick={updateBanker}>Manage Banker</button>
+                <button id="addbankerbtn" onClick={cancelBanker}>Back</button>
             </div>
         </div>
     )

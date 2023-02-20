@@ -10,6 +10,7 @@ import Dashboard from './Container/Dashboard/Dashboard';
 function App() {
   return (
     <div className="App">
+      <h1 id="header"> Group two online banking system</h1>
      <BrowserRouter>
       <Dashboard/>
      </BrowserRouter>

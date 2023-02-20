@@ -49,7 +49,7 @@ export default function CustomerDetails(props) {
     });
 
     return (
-        <div id="details">
+        <div id="customerdetails">
             <div>
                 <h1>First Name: {customerObj.firstName}</h1>
                 <h1>Last Name:{customerObj.lastName}</h1>
@@ -62,9 +62,9 @@ export default function CustomerDetails(props) {
                 </ul>
             </div>
             <div>
-                <button onClick={deleteCustomer}>Delete</button>
-                <button onClick={updateCustomer}>Manage Customer</button>
-                <button onClick={cancelCustomer}>Back</button>
+                <button id="addbankerbtn" onClick={deleteCustomer}>Delete</button>
+                <button id="addbankerbtn" onClick={updateCustomer}>Manage Customer</button>
+                <button id="addbankerbtn" onClick={cancelCustomer}>Back</button>
             </div>
         </div>
     )

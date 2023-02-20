@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import './Customer.css'
 
 export default function DepositMoney() {
 
@@ -29,10 +30,10 @@ export default function DepositMoney() {
 
     return (
         <div>
-            <div>
+            <div id="deposit">
 
                 <label>Enter your AccountID: </label>
-                <input type="text" value={inputId} onChange={(e) => setInputId(e.target.value)} />
+                <input type="text" value={inputId} onChange={(e) => setInputId(e.target.value)} /><br/><br/>
 
                 <label>selectBalance: </label>
                 <select onChange={(e) => { setCriteria(e.target.value) }}>
@@ -40,9 +41,9 @@ export default function DepositMoney() {
                     <option value={'amount'}>1000</option>
                     <option value={'amount'}>2000</option>
                     <option value={'amount'}>3000</option>
-                </select>
+                </select><br/><br/>
 
-                <button onClick={ApplyDeposit}>Deposit</button>
+                <button id="depositbtn" onClick={ApplyDeposit}>Deposit</button>
 
 
 

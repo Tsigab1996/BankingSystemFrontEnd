@@ -1,14 +1,16 @@
 .header {
-    width: 80%;
+    width: 1500px;
     height: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTngrE7wWsjvaZeh74WZTahU_9qi1s0QfHS3A&usqp=CAU);
-   background-size: cover;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTngrE7wWsjvaZeh74WZTahU_9qi1s0QfHS3A&usqp=CAU);
+    background-size: cover;
     padding: 0 10%;
     border-radius: 20px;
     position:fixed;
+    position: relative;
+    position: static;
     margin-top: 10px;
     opacity: 0.8px;
   }
@@ -19,6 +21,7 @@
     margin: 0;
     padding: 0;
     align-items: center;
+    padding-left: 0px;
   }
   
   .header li {

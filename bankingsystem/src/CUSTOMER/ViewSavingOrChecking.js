@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import './Customer.css'
 
 export default function ViewSavingOrChecking() {
 
@@ -30,19 +31,19 @@ export default function ViewSavingOrChecking() {
 
     return (
         <div>
-            <div>
+            <div id='viewbalance'>
 
                 <label>InputUserID: </label>
-                <input type="text" value={inputId} onChange={(e) => setInputId(e.target.value)} />
+                <input type="text" value={inputId} onChange={(e) => setInputId(e.target.value)} /><br/><br/>
 
                 <label>ChooseYourOption: </label>
                 <select onChange={(e) => { setCriteria(e.target.value) }}>
                     <option value={'saving'}>viewSavingBalance</option>
                     <option value={'checking'}>viewCheckingBalance</option>
-                </select>
+                </select><br/><br/>
 
 
-                <button onClick={viewSavingOrChecking}>ViewBalance</button>
+                <button  id="viewbalancebtn" onClick={viewSavingOrChecking}>ViewBalance</button>
 
                 <div>
                     {<label>Your Current Balance is: {amount}</label>}
