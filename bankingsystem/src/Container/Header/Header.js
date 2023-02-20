@@ -10,7 +10,8 @@ export default function Header() {
         <nav>
           <ul>
 
-             
+             {/* HomePage */}
+             <li><Link to="/">HomePage</Link></li>
 
             {/* Admin */}
             <li><Link to="/viewbankers">Bankers</Link></li>
@@ -33,7 +34,7 @@ export default function Header() {
 
 
             {/* log in */}
-            {/* <li><Link to="/login">LogIn</Link></li> */}
+            <li><Link to="/login">LogIn</Link></li>
 
           </ul>
         </nav>

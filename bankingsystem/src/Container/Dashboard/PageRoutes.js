@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes,Navigate } from 'react-router-dom'
 import Accounts from '../../ADMIN/Accounts'
 import AddBanker from '../../ADMIN/AddBanker'
 import BankerDetails from '../../ADMIN/BankerDetails'
@@ -14,12 +14,21 @@ import DepositMoney from '../../CUSTOMER/DepositMoney'
 import ViewSavingOrChecking from '../../CUSTOMER/ViewSavingOrChecking'
 import ViewTransactionHistroy from '../../CUSTOMER/ViewTransactionHistroy'
 import WithdrawMoney from '../../CUSTOMER/WithdrawMoney'
+import HomePage from '../../HomePage/HomePage'
+import LogInPage from '../../LogInPage/LogInPage'
 
 export default function PageRoutes(props) {
 
     return (
         <div>
             <Routes>
+
+                {/* HomePage */}
+                <Route path="/" element={<Navigate to="homepage"/>}></Route>
+                <Route path="homepage">
+                <Route index element={<HomePage />} />
+                
+                </Route>
 
                 {/* ADMIN */}
 
@@ -71,7 +80,7 @@ export default function PageRoutes(props) {
 
 
                 {/* log in */}
-                {/* <Route path="login" element={<LogInPage />}></Route> */}
+                <Route path="login" element={<LogInPage/>}></Route>
 
 
             </Routes>
