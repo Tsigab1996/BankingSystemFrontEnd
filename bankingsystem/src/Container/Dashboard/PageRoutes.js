@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes, Navigate } from 'react-router-dom'
+import Address from '../../ADDRESS/Address'
 import Accounts from '../../ADMIN/Accounts'
 import AddBanker from '../../ADMIN/AddBanker'
 import BankerDetails from '../../ADMIN/BankerDetails'
@@ -15,8 +16,9 @@ import DepositMoney from '../../CUSTOMER/DepositMoney'
 import ViewSavingOrChecking from '../../CUSTOMER/ViewSavingOrChecking'
 import ViewTransactionHistroy from '../../CUSTOMER/ViewTransactionHistroy'
 import WithdrawMoney from '../../CUSTOMER/WithdrawMoney'
-import HomePage from '../../HomePage/HomePage'
-import LogInPage from '../../LogInPage/LogInPage'
+import HomePage from '../../HOMEPAGE/HomePage'
+import LogInPage from '../../LOGINPAGE/LogInPage'
+import Teams from '../../TEAMS/Teams'
 
 export default function PageRoutes(props) {
 
@@ -86,6 +88,9 @@ export default function PageRoutes(props) {
 
                 {/* log in */}
                 <Route path="login" element={<LogInPage />}></Route>
+                <Route path='address' element={<Address/>}></Route>
+                <Route path='teams' element={<Teams/>}></Route>
+               
 
 
 

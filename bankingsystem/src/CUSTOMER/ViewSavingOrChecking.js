@@ -50,7 +50,7 @@ export default function ViewSavingOrChecking() {
                 <button id="viewbalancebtn" onClick={viewSavingOrChecking}>ViewBalance</button>
                 {/* <button onClick={back}>back</button> */}
 
-                <div>
+                <div >
                     {<label>Your Current Balance is: {amount}</label>}
                 </div>
 

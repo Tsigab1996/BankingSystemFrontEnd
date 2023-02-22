@@ -314,17 +314,17 @@ body {
     margin-top: 100px;
     padding-left: 0px;
     opacity: 0.7;
-    border-radius: 100px;
+    border-bottom-left-radius: 200px;
+    border-top-right-radius: 200px;
     padding-bottom: 10px;
     padding-top: 30px;
-    color: rgb(12, 10, 14);
     font-size: 15px;
     font-family: nigerian;
     font-style: italic;
     text-transform: capitalize;
     font-weight: bolder;
     list-style-type: none;
-    color: black;
+    color: rgb(27, 15, 240);
     width: 800px;
 
 

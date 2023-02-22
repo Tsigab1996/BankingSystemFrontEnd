@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
-import FetchToken from '../Token/FetchToken';
+import FetchToken from '../TOKEN/FetchToken';
 import './Banker.css'
 
 export default function ManageCustomer() {

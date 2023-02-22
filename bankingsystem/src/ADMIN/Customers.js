@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import FetchToken from '../Token/FetchToken';
+import FetchToken from '../TOKEN/FetchToken';
 import Users from './Users';
 
 export default function Customers(props) {

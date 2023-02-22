@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './Header.css'
 import jwt_decode from "jwt-decode";
-import { LoginContext } from '../../Context/LoginContext';
+import { LoginContext } from '../../CONTEXT/LoginContext';
 
 export default function Header() {
 
@@ -12,23 +12,8 @@ export default function Header() {
   const token = localStorage.getItem("token");
   const roles = localStorage.getItem("roles");
 
-  // console.log(token);
-  // console.log(roles);
-  // const getToken = () => {
-  //   if (token != null) {
-  //     setIsLogin(true)
-  //   } else {
-  //     setIsLogin(false);
-  //   }
-  // }
-
-  // const details = jwt_decode(token);
-  // console.log(details)
 
 
-  // useEffect(() => {
-  //   getToken();
-  // },[isLogin])
   const [isLogin, setIsLogin] = useContext(LoginContext);
   const navigate = useNavigate();
 
@@ -41,7 +26,7 @@ export default function Header() {
   return (
     <div>
       <header>
-        <nav>
+        <nav id='navigate'>
           <ul>
 
 
@@ -96,6 +81,11 @@ export default function Header() {
               : null
             }
 
+
+            <li><Link to="/address">Contact</Link></li>
+            <li><Link to="/teams"> <div id="imgTsigab">
+              <img src='https://msd.miu.edu/wp-content/uploads/Tsigab-MSD-Student.jpg' width="80px" height="60px" alt='TsigabPic' />
+            </div></Link></li>
 
 
 

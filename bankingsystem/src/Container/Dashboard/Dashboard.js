@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from 'react'
-import { LoginContext } from '../../Context/LoginContext';
+import { LoginContext } from '../../CONTEXT/LoginContext';
+
 import Header from '../Header/Header'
 import PageRoutes from './PageRoutes'
 

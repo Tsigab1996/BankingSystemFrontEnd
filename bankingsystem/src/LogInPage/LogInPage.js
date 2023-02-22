@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router";
 import './Login.css'
-import { LoginContext } from "../Context/LoginContext";
+import { LoginContext } from "../CONTEXT/LoginContext";
 
 
 
