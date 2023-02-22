@@ -1,10 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+import FetchToken from '../Token/FetchToken';
 import Users from './Users';
 
 export default function Customers(props) {
     const [customers, setCustomers] = useState([]);
+    const config = { headers: { "Authorization": `Bearers ${FetchToken()}` } }
 
     const getAllCustomers = () => {
         axios.get("http://localhost:8080/api/v1/users/customers")

@@ -9,14 +9,18 @@ export default function ViewSavingOrChecking() {
     const [amount, setAmount] = useState();
 
 
+
+
+
     let viewSavingOrChecking = () => {
         if (criteria != null && inputId != null) {
             axios.get("http://localhost:8080/api/v1/users/filter/" + inputId, {
                 params: {
-                    ChooseYourOption: criteria,
+                    value: criteria,
                 }
             }).then((result) => {
                 setAmount(result.data);
+
             }).catch(() => {
                 console.error();
             });
@@ -26,7 +30,7 @@ export default function ViewSavingOrChecking() {
 
     useEffect(() => {
         viewSavingOrChecking();
-    })
+    }, [])
 
 
     return (
@@ -34,16 +38,17 @@ export default function ViewSavingOrChecking() {
             <div id='viewbalance'>
 
                 <label>InputUserID: </label>
-                <input type="text" value={inputId} onChange={(e) => setInputId(e.target.value)} /><br/><br/>
+                <input type="text" value={inputId} onChange={(e) => setInputId(e.target.value)} /><br /><br />
 
-                <label>ChooseYourOption: </label>
+                <label>Account Type: </label>
                 <select onChange={(e) => { setCriteria(e.target.value) }}>
                     <option value={'saving'}>viewSavingBalance</option>
                     <option value={'checking'}>viewCheckingBalance</option>
-                </select><br/><br/>
+                </select><br /><br />
 
 
-                <button  id="viewbalancebtn" onClick={viewSavingOrChecking}>ViewBalance</button>
+                <button id="viewbalancebtn" onClick={viewSavingOrChecking}>ViewBalance</button>
+                {/* <button onClick={back}>back</button> */}
 
                 <div>
                     {<label>Your Current Balance is: {amount}</label>}

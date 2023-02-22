@@ -10,7 +10,9 @@ export default function Transaction(props) {
                         <h1>Transaction Date: {props.transactionDate}</h1>
                         <h1>Amount: {props.amount}</h1>
                         <h1>Transaction Type: {props.transactionType}</h1>
-                        </div>
+                        <h1>Transaction Time:{props.transactionTime} </h1>
+                        <h1>Transaction Balance: {props.transactionBalance}</h1>
+                    </div>
                 </li>
             </ul>
         </div>

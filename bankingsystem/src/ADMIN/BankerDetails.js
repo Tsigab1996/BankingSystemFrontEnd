@@ -1,10 +1,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
+import FetchToken from '../Token/FetchToken';
 
 export default function BankerDetails(props) {
+    //const location= useLocation();
     const param = useParams();
     const navigate = useNavigate();
+    const config = { headers: { "Authorization": `Bearers ${FetchToken()}` } }
 
     const [bankerObj, setBankerObj] = useState({
         firstName: "",
@@ -15,8 +18,9 @@ export default function BankerDetails(props) {
 
     });
 
+
     const getBankerObjById = () => {
-        axios.get("http://localhost:8080/api/v1/users/" + param.id)
+        axios.get("http://localhost:8080/api/v1/users/get/" + param.id)
             .then((res) => {
                 setBankerObj(res.data);
             }).catch(() => {
@@ -25,7 +29,7 @@ export default function BankerDetails(props) {
     }
 
     const deleteBanker = () => {
-        axios.delete("http://localhost:8080/api/v1/users/" + param.id)
+        axios.delete("http://localhost:8080/api/v1/users/delete/" + param.id)
             .then(() => {
                 console.log("successfully deleted")
             }).catch(() => {
@@ -37,15 +41,16 @@ export default function BankerDetails(props) {
     const cancelBanker = () => {
         navigate('/')
     }
-    
+
 
     const updateBanker = () => {
         navigate("/managebanker/" + param.id);
+        console.log(param.id);
     }
 
     useEffect(() => {
         getBankerObjById();
-    });
+    }, []);
 
     return (
         <div id="bankerdetails">

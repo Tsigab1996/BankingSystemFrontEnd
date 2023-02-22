@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
+import FetchToken from '../Token/FetchToken';
 import './Banker.css'
 
 export default function AddCustomer() {
@@ -8,8 +9,9 @@ export default function AddCustomer() {
 
     const form = useRef();
     let navigate = useNavigate();
+    const config = { headers: { "Authorization": `Bearers ${FetchToken()}` } }
 
-    
+
 
     let saveCustomer = (e) => {
         e.preventDefault();
@@ -25,7 +27,7 @@ export default function AddCustomer() {
 
 
 
-        axios.post("http://localhost:8080/api/v1/users", data)
+        axios.post("http://localhost:8080/api/v1/users/save", data)
             .then(response => {
                 console.log("successfully added")
             }).catch(err => {
@@ -34,98 +36,44 @@ export default function AddCustomer() {
     }
 
 
-    const nextHandler = () => {
-
-        let saveAccount = (e) => {
-            e.preventDefault();
-            let formData = form.current;
-
-            const data = {
-                accountNumber: formData['accountNumber'].value,
-                balance: formData['balance'].value,
-                createdAt: formData['createdAt'].value,
-                accountType: formData['accountType'].value,
-
-            }
-
-
-
-            axios.post("http://localhost:8080/api/v1/accounts", data)
-                .then(response => {
-                    navigate("/");
-                }).catch(err => {
-                    alert(err);
-                })
-        }
-
-        return (
-            <div className="NewAccount">
-
-                <form ref={form}>
-                    <h1>Add an Account</h1>
-
-                    <label>Account Number</label>
-                    <input type="text"
-                        label={'accountNumber'}
-                        name={'accountNumber'}
-                    />
-
-                    <label>Balance</label>
-                    <input type="text"
-                        label={'balance'}
-                        name={'balance'}
-                    />
-
-                    <label>Account Type</label>
-                    <input type="text"
-                        label={'accountType'}
-                        name={'accountType'}
-                    />
-
-                    <button onClick={saveAccount}>Add Account</button>
-                </form>
-
-            </div>
-        );
-    }
 
     return (
         <div className="NewCustomer">
 
-            <form  id='addcustomer' ref={form}>
+            <form id='addcustomer' ref={form}>
                 <h1>Add a Customer</h1>
 
                 <label>First Name</label>
                 <input type="text"
                     label={'firstName'}
                     name={'firstName'}
-                /><br/><br/>
+                /><br /><br />
 
                 <label>Last Name</label>
                 <input type="text"
                     label={'lastName'}
                     name={'lastName'}
-                /><br/><br/>
+                /><br /><br />
 
                 <label>Phone Number</label>
                 <input type="text"
                     label={'phoneNumber'}
                     name={'phoneNumber'}
-                /><br/><br/>
+                /><br /><br />
 
                 <label>Email</label>
                 <input type="text"
                     label={'email'}
                     name={'email'}
-                /><br/><br/>
+                /><br /><br />
 
                 <label>Password</label>
                 <input type="password"
                     label={'password'}
                     name={'password'}
-                /><br/><br/>
+                /><br /><br />
                 <button id="addcustomerbtn" onClick={saveCustomer}>Add Customer</button>
-                <button id="addcustomerbtn" onClick={nextHandler}>Next</button>
+
             </form>
 
         </div>

@@ -1,24 +1,26 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './Customer.css'
 
 export default function DepositMoney() {
 
+    const navigate = useNavigate();
 
-
-    const [criteria, setCriteria] = useState();
+    const [amount, setAmount] = useState();
     const [inputId, setInputId] = useState();
+
+    console.log("Amount: " + amount);
+    console.log("Id " + inputId);
 
 
 
     let ApplyDeposit = () => {
-        if (criteria != null && inputId != null) {
+        if (amount != 0 && inputId != null) {
             axios.post("http://localhost:8080/api/v1/accounts/deposit/" + inputId, {
-                params: {
-                    filter: criteria,
-                }
+                amount: amount
             }).then((result) => {
-                console.log(result.data);
+                navigate('/')
             }).catch(() => {
                 console.error();
             });
@@ -33,15 +35,10 @@ export default function DepositMoney() {
             <div id="deposit">
 
                 <label>Enter your AccountID: </label>
-                <input type="text" value={inputId} onChange={(e) => setInputId(e.target.value)} /><br/><br/>
+                <input type="text" value={inputId} onChange={(e) => setInputId(e.target.value)} /><br /><br />
 
-                <label>selectBalance: </label>
-                <select onChange={(e) => { setCriteria(e.target.value) }}>
-                    <option value={'amount'}>500</option>
-                    <option value={'amount'}>1000</option>
-                    <option value={'amount'}>2000</option>
-                    <option value={'amount'}>3000</option>
-                </select><br/><br/>
+                <label>Enter Balance: </label>
+                <input type="text" value={amount} onChange={(e) => setAmount(e.target.value)} /><br /><br />
 
                 <button id="depositbtn" onClick={ApplyDeposit}>Deposit</button>
 

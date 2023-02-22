@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes,Navigate } from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom'
 import Accounts from '../../ADMIN/Accounts'
 import AddBanker from '../../ADMIN/AddBanker'
 import BankerDetails from '../../ADMIN/BankerDetails'
@@ -8,6 +8,7 @@ import CustomerDetails from '../../ADMIN/CustomerDetails'
 import Customers from '../../ADMIN/Customers'
 import ManageBanker from '../../ADMIN/ManageBanker'
 import TransactionDetails from '../../ADMIN/TransactionDetails'
+import AddAccount from '../../BANKER/AddAccount'
 import AddCustomer from '../../BANKER/AddCustomer'
 import ManageCustomer from '../../BANKER/ManageCustomer'
 import DepositMoney from '../../CUSTOMER/DepositMoney'
@@ -19,15 +20,16 @@ import LogInPage from '../../LogInPage/LogInPage'
 
 export default function PageRoutes(props) {
 
+
     return (
         <div>
             <Routes>
 
                 {/* HomePage */}
-                <Route path="/" element={<Navigate to="homepage"/>}></Route>
+                <Route path="/" element={<Navigate to="homepage" />}></Route>
                 <Route path="homepage">
-                <Route index element={<HomePage />} />
-                
+                    <Route index element={<HomePage />} />
+
                 </Route>
 
                 {/* ADMIN */}
@@ -54,13 +56,16 @@ export default function PageRoutes(props) {
                 {/* This is how to add a banker */}
                 <Route path="addbanker" element={<AddBanker />}></Route>
                 {/* This is how to manage a banker */}
-                <Route path="managebanker" element={<ManageBanker />}></Route>
+                <Route path="managebanker/:id" element={<ManageBanker />}></Route>
 
 
                 {/* BANKER */}
 
                 {/* This is how to add a customer */}
                 <Route path="addcustomer" element={<AddCustomer />}></Route>
+
+                {/* This is how to add an account */}
+                <Route path="addaccount/:id" element={<AddAccount />}></Route>
 
                 {/* This is how to view customers and their details */}
                 <Route path="viewcustomerinfo">
@@ -69,7 +74,7 @@ export default function PageRoutes(props) {
                 </Route>
 
                 {/* This is how to manage a customer */}
-                <Route path="managecustomer" element={<ManageCustomer />}></Route>
+                <Route path="managecustomer/:id" element={<ManageCustomer />}></Route>
 
 
                 {/* CUSTOMER */}
@@ -80,7 +85,9 @@ export default function PageRoutes(props) {
 
 
                 {/* log in */}
-                <Route path="login" element={<LogInPage/>}></Route>
+                <Route path="login" element={<LogInPage />}></Route>
+
+
 
 
             </Routes>
