@@ -1,5 +1,5 @@
 .header {
-  width: 100%;
+  width: 1100px;
   height: 5rem;
   display: flex;
   justify-content: space-between;
@@ -76,7 +76,7 @@
 
 #imgTsigab{
   width: 100px;
-  margin-left: 1000px;
+  margin-left: 600px;
   margin-right: 100px;
   border-radius:200px;
   
